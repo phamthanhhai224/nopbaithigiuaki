@@ -17,11 +17,10 @@ const dynamodb = new aws.DynamoDB.DocumentClient({
     {
         deleteItems: [sp1,sp2,sp3]
     }
-    nguyenthanhlong1375@gmail.com
+    
 */
 router.delete('/', (req, res) => {
-    let deleteItems = req.body.deleteItems;
-    console.log(req.body)
+    let deleteItems = req.body.deleteItem;
     deleteItems.forEach(item => {
         let param = {
             TableName:"sanphamgiuaky",
