@@ -1,0 +1,20 @@
+<table style="border:solid 1px black">
+    <thead >
+        <tr >
+            <td>Ma sp</td>
+            <td>Ten san pham</td>
+            <td>so luong</td>
+            <td>chuc nang</td>
+        </tr>
+    </thead>
+    <tbody >
+        <%allSanPham.forEach(sanpham => { %>
+        <tr>
+            <td><%=sanpham.masanpham%></td>
+            <td><%=sanpham.ten%></td>
+            <td><%=sanpham.soluong%></td>
+            <td><a href="/delete/<%= sanpham.masanpham%>">xoa</a></td>
+        </tr>    
+        <% });%>
+    </tbody>
+</table>
